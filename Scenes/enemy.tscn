@@ -1,0 +1,56 @@
+[gd_scene load_steps=8 format=3 uid="uid://cbd23j72lr8oh"]
+
+[ext_resource type="Script" uid="uid://dg2lx7iict5bl" path="res://Scripts/enemy.gd" id="1_1f0kj"]
+[ext_resource type="Texture2D" uid="uid://c2u3a4w8epdcn" path="res://Images/characterTileMap.png" id="1_hghv2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1f0kj"]
+atlas = ExtResource("1_hghv2")
+region = Rect2(66, 0, 66, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_afpow"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1f0kj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_287tu"]
+radius = 24.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0830c"]
+radius = 23.0217
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ghaa6"]
+radius = 177.181
+
+[node name="enemy" type="CharacterBody2D"]
+script = ExtResource("1_1f0kj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(2, 0)
+sprite_frames = SubResource("SpriteFrames_afpow")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 0)
+shape = SubResource("CircleShape2D_287tu")
+
+[node name="hitBox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitBox"]
+position = Vector2(-1, 0)
+shape = SubResource("CircleShape2D_0830c")
+
+[node name="detectionBox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detectionBox"]
+shape = SubResource("CircleShape2D_ghaa6")
+
+[connection signal="area_entered" from="hitBox" to="." method="_on_hit_box_area_entered"]
+[connection signal="area_entered" from="detectionBox" to="." method="_on_detection_box_area_entered"]
+[connection signal="area_exited" from="detectionBox" to="." method="_on_detection_box_area_exited"]
+[connection signal="body_entered" from="detectionBox" to="." method="_on_detection_box_body_entered"]
+[connection signal="body_exited" from="detectionBox" to="." method="_on_detection_box_body_exited"]

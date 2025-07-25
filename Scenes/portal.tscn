@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2unndrqqeih0"]
+
+[ext_resource type="Script" uid="uid://c3h41ylmfbh2t" path="res://Scripts/portal.gd" id="1_oi2tk"]
+[ext_resource type="Texture2D" uid="uid://cq4bfmxn1ygk7" path="res://Images/groundTileMap.png" id="2_dashy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uwyjv"]
+radius = 39.0512
+
+[node name="Portal" type="Area2D"]
+script = ExtResource("1_oi2tk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1, 0)
+texture = ExtResource("2_dashy")
+region_enabled = true
+region_rect = Rect2(192, 0, 192, 192)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_uwyjv")
+
+[node name="PortalText" type="RichTextLabel" parent="."]
+visible = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -81.0
+offset_top = 85.0
+offset_right = 92.0
+offset_bottom = 137.0
+grow_horizontal = 2
+text = "Press \"F\" to enter the void plane"
+tab_size = 5
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

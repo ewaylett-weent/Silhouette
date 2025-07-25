@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://babrc22tilfed"]
+
+[ext_resource type="Texture2D" uid="uid://dlwxy2lwa28tn" path="res://Images/buildings.png" id="1_nvd6s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qv81b"]
+size = Vector2(153, 181)
+
+[node name="buildingGem" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2, 1)
+scale = Vector2(1.4, 1)
+texture = ExtResource("1_nvd6s")
+region_enabled = true
+region_rect = Rect2(256, 0, 64, 128)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2.5, 18.5)
+shape = SubResource("RectangleShape2D_qv81b")

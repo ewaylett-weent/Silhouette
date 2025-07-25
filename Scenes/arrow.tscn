@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://biiacvu2mh0iw"]
+
+[ext_resource type="Texture2D" uid="uid://dbf58tlcy7w4y" path="res://Images/projectileTileMap.png" id="1_2u0bd"]
+[ext_resource type="Script" uid="uid://cak3kolhgq3ln" path="res://Scripts/arrow.gd" id="1_h5x2m"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h5x2m"]
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_h5x2m")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5708
+texture = ExtResource("1_2u0bd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+scale = Vector2(0.495, 1)
+shape = SubResource("CapsuleShape2D_h5x2m")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
+position = Vector2(0, 2.38419e-07)
+scale = Vector2(0.5, 0.5)
+
+[connection signal="screen_exited" from="VisibleOnScreenEnabler2D" to="." method="_on_visible_on_screen_enabler_2d_screen_exited"]
