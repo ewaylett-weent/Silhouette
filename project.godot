@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Silhouette"
-run/main_scene="uid://cnbi6knfqhef1"
+run/main_scene="uid://cyvu41wjvnik1"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://Images/icon.svg"
 

@@ -1,21 +1,21 @@
 [gd_scene load_steps=8 format=3 uid="uid://d1l1a1jp2ehkq"]
 
-[ext_resource type="Script" uid="uid://cch2eibbw1up4" path="res://Scripts/player.gd" id="1_onrkg"]
-[ext_resource type="Texture2D" uid="uid://c2u3a4w8epdcn" path="res://Images/characterTileMap.png" id="2_cvnsp"]
+[ext_resource type="Script" uid="uid://cch2eibbw1up4" path="res://Scripts/Player/player.gd" id="1_a3d8c"]
+[ext_resource type="Texture2D" uid="uid://c2u3a4w8epdcn" path="res://Images/characterTileMap.png" id="2_xpcdj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i3pqv"]
 size = Vector2(56, 56)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cvnsp"]
-atlas = ExtResource("2_cvnsp")
+atlas = ExtResource("2_xpcdj")
 region = Rect2(0, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6t5aa"]
-atlas = ExtResource("2_cvnsp")
+atlas = ExtResource("2_xpcdj")
 region = Rect2(0, 64, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vgqql"]
-atlas = ExtResource("2_cvnsp")
+atlas = ExtResource("2_xpcdj")
 region = Rect2(0, 128, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_x3wgy"]
@@ -40,7 +40,7 @@ animations = [{
 
 [node name="Player" type="CharacterBody2D"]
 motion_mode = 1
-script = ExtResource("1_onrkg")
+script = ExtResource("1_a3d8c")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_i3pqv")

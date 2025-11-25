@@ -14,7 +14,7 @@ var dashCooldownTimer = Timer.new()
 
 var bowEquiped = true
 var bowCooldown = true
-var arrow = preload("res://Scenes/arrow.tscn")
+var arrow = preload("res://Scenes/Player/arrow.tscn")
 
 var mouseLocFromPlayer = null
 

@@ -2,13 +2,13 @@
 
 [ext_resource type="Texture2D" uid="uid://cq4bfmxn1ygk7" path="res://Images/groundTileMap.png" id="1_fhp0g"]
 [ext_resource type="Script" uid="uid://c6uk6qr8hf80j" path="res://Scripts/village.gd" id="1_hsw83"]
-[ext_resource type="PackedScene" uid="uid://babrc22tilfed" path="res://Scenes/buidingGem.tscn" id="2_4ev5p"]
-[ext_resource type="PackedScene" uid="uid://cr3ppb80qq5vx" path="res://Scenes/buidingDefence.tscn" id="3_yf0b0"]
-[ext_resource type="PackedScene" uid="uid://bdb5h4k4h38p3" path="res://Scenes/buidingUtility.tscn" id="4_hsw83"]
-[ext_resource type="PackedScene" uid="uid://bk28t48syria5" path="res://Scenes/buildingOffence.tscn" id="5_7en6d"]
-[ext_resource type="PackedScene" uid="uid://c2abgqb1vw4i0" path="res://Scenes/buildingVoid.tscn" id="6_lwl7v"]
-[ext_resource type="PackedScene" uid="uid://d1l1a1jp2ehkq" path="res://Scenes/player.tscn" id="7_d5xyy"]
-[ext_resource type="PackedScene" uid="uid://b2unndrqqeih0" path="res://Scenes/portal.tscn" id="7_yf0b0"]
+[ext_resource type="PackedScene" uid="uid://babrc22tilfed" path="res://Scenes/Buildings/buidingGem.tscn" id="2_4ev5p"]
+[ext_resource type="PackedScene" uid="uid://cr3ppb80qq5vx" path="res://Scenes/Buildings/buidingDefence.tscn" id="3_yf0b0"]
+[ext_resource type="PackedScene" uid="uid://bdb5h4k4h38p3" path="res://Scenes/Buildings/buidingUtility.tscn" id="4_hsw83"]
+[ext_resource type="PackedScene" uid="uid://bk28t48syria5" path="res://Scenes/Buildings/buildingOffence.tscn" id="5_7en6d"]
+[ext_resource type="PackedScene" uid="uid://c2abgqb1vw4i0" path="res://Scenes/Buildings/buildingVoid.tscn" id="6_lwl7v"]
+[ext_resource type="PackedScene" uid="uid://d1l1a1jp2ehkq" path="res://Scenes/Player/player.tscn" id="7_d5xyy"]
+[ext_resource type="PackedScene" uid="uid://b2unndrqqeih0" path="res://Scenes/Buildings/portal.tscn" id="7_yf0b0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ofn1o"]
 texture = ExtResource("1_fhp0g")
@@ -70,4 +70,4 @@ position = Vector2(230, 317)
 position = Vector2(27, 18)
 
 [node name="Player" parent="." instance=ExtResource("7_d5xyy")]
-position = Vector2(40, 157)
+position = Vector2(28, 38)

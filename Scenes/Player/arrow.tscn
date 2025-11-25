@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://biiacvu2mh0iw"]
 
 [ext_resource type="Texture2D" uid="uid://dbf58tlcy7w4y" path="res://Images/projectileTileMap.png" id="1_2u0bd"]
-[ext_resource type="Script" uid="uid://cak3kolhgq3ln" path="res://Scripts/arrow.gd" id="1_h5x2m"]
+[ext_resource type="Script" uid="uid://cak3kolhgq3ln" path="res://Scripts/Player/arrow.gd" id="1_h5x2m"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h5x2m"]
 

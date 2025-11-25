@@ -3,10 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://cq4bfmxn1ygk7" path="res://Images/groundTileMap.png" id="1_fo5h7"]
 [ext_resource type="Script" uid="uid://bdnovsxqkf5o8" path="res://Scripts/silhouette.gd" id="1_xfs87"]
 [ext_resource type="Texture2D" uid="uid://dbf58tlcy7w4y" path="res://Images/projectileTileMap.png" id="2_aolg0"]
-[ext_resource type="PackedScene" uid="uid://d1l1a1jp2ehkq" path="res://Scenes/player.tscn" id="2_mipor"]
+[ext_resource type="PackedScene" uid="uid://d1l1a1jp2ehkq" path="res://Scenes/Player/player.tscn" id="2_mipor"]
 [ext_resource type="Texture2D" uid="uid://dlwxy2lwa28tn" path="res://Images/buildings.png" id="3_mvj20"]
-[ext_resource type="PackedScene" uid="uid://cbd23j72lr8oh" path="res://Scenes/enemy.tscn" id="4_aolg0"]
-[ext_resource type="PackedScene" uid="uid://b2unndrqqeih0" path="res://Scenes/portal.tscn" id="7_h8t3v"]
+[ext_resource type="PackedScene" uid="uid://cbd23j72lr8oh" path="res://Scenes/Enemies/enemy.tscn" id="4_aolg0"]
+[ext_resource type="PackedScene" uid="uid://b2unndrqqeih0" path="res://Scenes/Buildings/portal.tscn" id="7_h8t3v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m2pr4"]
 texture = ExtResource("1_fo5h7")
