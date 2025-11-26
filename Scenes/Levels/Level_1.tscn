@@ -47,4 +47,4 @@ tile_set = SubResource("TileSet_nw7js")
 position = Vector2(6393, 6283)
 
 [node name="EnemySpawner" parent="." instance=ExtResource("4_87l2y")]
-position = Vector2(5652, 5808)
+position = Vector2(5952, 6290)
