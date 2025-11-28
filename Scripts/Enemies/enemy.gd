@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+var floatingText = preload("res://Scenes/Misc/Floating_Text.tscn")
+
 var speed = 300
 var health = 200
 var damage = 100
@@ -32,13 +34,19 @@ func _on_detection_box_body_exited(body):
 	pass
 
 func _on_hit_box_area_entered(area):
-	var damage
+	var dmg
 	if area.has_method("arrow"):
-		damage = 50
-		takeDamage(damage)
+		dmg = area.damage
+		takeDamage(dmg)
 		
-func takeDamage(damage):
-	health = health - damage
+func takeDamage(dmg):
+	health = health - dmg
+	
+	var text = floatingText.instantiate()
+	text.amount = dmg
+	text.position.y = text.position.y - 30
+	add_child(text)
+	
 	if health <= 0 and !dead:
 		death()
 		
