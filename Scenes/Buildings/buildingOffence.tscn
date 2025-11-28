@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://bk28t48syria5"]
+[gd_scene load_steps=4 format=3 uid="uid://bk28t48syria5"]
 
+[ext_resource type="Script" uid="uid://ch16kdsavwto4" path="res://Scripts/Buildings/building_offence.gd" id="1_kcut6"]
 [ext_resource type="Texture2D" uid="uid://dlwxy2lwa28tn" path="res://Images/buildings.png" id="1_vh6y7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qv81b"]
 size = Vector2(159, 198)
 
 [node name="buildingOffence" type="Area2D"]
+script = ExtResource("1_kcut6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(1.25, 0.75)
@@ -17,3 +19,25 @@ region_rect = Rect2(0, 0, 64, 128)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 7)
 shape = SubResource("RectangleShape2D_qv81b")
+
+[node name="LevelText" type="RichTextLabel" parent="."]
+offset_left = -39.0
+offset_top = 67.0
+offset_right = 41.0
+offset_bottom = 82.0
+fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 1
+
+[node name="UpgradeText" type="RichTextLabel" parent="."]
+visible = false
+offset_left = -212.0
+offset_top = -93.0
+offset_right = 215.0
+offset_bottom = -53.0
+fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 1
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
