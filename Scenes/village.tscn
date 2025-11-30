@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=4 uid="uid://cyvu41wjvnik1"]
 
 [ext_resource type="Texture2D" uid="uid://cq4bfmxn1ygk7" path="res://Images/groundTileMap.png" id="1_fhp0g"]
-[ext_resource type="Script" uid="uid://c6uk6qr8hf80j" path="res://Scripts/village.gd" id="1_hsw83"]
+[ext_resource type="Script" uid="uid://c6uk6qr8hf80j" path="res://Scripts/Levels/village.gd" id="1_hsw83"]
 [ext_resource type="PackedScene" uid="uid://babrc22tilfed" path="res://Scenes/Buildings/buidingGem.tscn" id="2_4ev5p"]
 [ext_resource type="PackedScene" uid="uid://cr3ppb80qq5vx" path="res://Scenes/Buildings/buidingDefence.tscn" id="3_yf0b0"]
 [ext_resource type="PackedScene" uid="uid://bdb5h4k4h38p3" path="res://Scenes/Buildings/buidingUtility.tscn" id="4_hsw83"]

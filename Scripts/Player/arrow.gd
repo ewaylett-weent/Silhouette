@@ -1,7 +1,7 @@
 extends Area2D
 
 var speed = 800
-var damage = 51
+var damage = 51 * Global.offenceBuildingLevel
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

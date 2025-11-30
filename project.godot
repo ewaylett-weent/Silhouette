@@ -15,6 +15,10 @@ run/main_scene="uid://cyvu41wjvnik1"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://Images/icon.svg"
 
+[autoload]
+
+Global="*res://Scripts/Global.gd"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/gaea/plugin.cfg")
