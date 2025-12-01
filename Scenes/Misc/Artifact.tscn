@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://opx7ekk1l2l5"]
+
+[ext_resource type="Texture2D" uid="uid://lk8aehk6587d" path="res://Images/Artifact.png" id="1_pimv4"]
+[ext_resource type="Script" uid="uid://b8hl4jg8qalgf" path="res://Scripts/Misc/Artifact.gd" id="1_yjenw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gx66j"]
+radius = 29.1548
+
+[node name="Artifact" type="Area2D"]
+script = ExtResource("1_yjenw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_gx66j")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(3, -5)
+texture = ExtResource("1_pimv4")
+
+[node name="PickupLabel" type="RichTextLabel" parent="."]
+offset_left = -100.0
+offset_top = -47.0
+offset_right = 100.0
+offset_bottom = -31.0
+fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

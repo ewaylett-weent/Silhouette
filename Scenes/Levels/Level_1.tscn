@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=4 uid="uid://c1a0e0c44xcrx"]
+[gd_scene load_steps=8 format=4 uid="uid://c1a0e0c44xcrx"]
 
 [ext_resource type="Script" uid="uid://bkygbnbmqule0" path="res://Scripts/Levels/level_1.gd" id="1_q8yj7"]
 [ext_resource type="Texture2D" uid="uid://cq4bfmxn1ygk7" path="res://Images/groundTileMap.png" id="2_87l2y"]
 [ext_resource type="PackedScene" uid="uid://b2unndrqqeih0" path="res://Scenes/Buildings/portal.tscn" id="3_qpfou"]
 [ext_resource type="PackedScene" uid="uid://t7plmke11ubq" path="res://Scenes/Enemies/enemy_spawner.tscn" id="4_87l2y"]
+[ext_resource type="PackedScene" uid="uid://opx7ekk1l2l5" path="res://Scenes/Misc/Artifact.tscn" id="5_qpfou"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vnunq"]
 texture = ExtResource("2_87l2y")
@@ -44,7 +45,19 @@ tile_map_data = PackedByteArray("AAAAAAAAAAABAAMAAAAAAAEAAAABAAMAAAAAAAIAAAABAAM
 tile_set = SubResource("TileSet_nw7js")
 
 [node name="Portal" parent="." instance=ExtResource("3_qpfou")]
-position = Vector2(6393, 6283)
+position = Vector2(3166, 2118)
 
 [node name="EnemySpawner" parent="." instance=ExtResource("4_87l2y")]
-position = Vector2(5952, 6290)
+position = Vector2(2482, 2096)
+
+[node name="Artifact" parent="." instance=ExtResource("5_qpfou")]
+position = Vector2(3566, 2121)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 3107.0
+offset_top = 1852.0
+offset_right = 3450.0
+offset_bottom = 1917.0
+theme_override_font_sizes/bold_italics_font_size = 1
+theme_override_font_sizes/normal_font_size = 28
+text = "Level 1"

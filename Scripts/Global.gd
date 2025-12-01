@@ -1,6 +1,7 @@
 extends Node
 
-var offenceBuildingLevel = 0
+var offenceBuildingLevel = 1
+var level1Completed = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
