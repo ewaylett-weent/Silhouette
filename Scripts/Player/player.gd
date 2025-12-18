@@ -30,6 +30,11 @@ func _ready():
 	dashCooldownTimer.one_shot = true
 	dashCooldownTimer.timeout.connect(_on_dash_cooldown_timeout)
 
+func _process(delta: float) -> void:
+	var valueString = "%.0f" % Global.gold 
+	$GoldValue.clear()
+	$GoldValue.add_text(valueString)
+
 func _physics_process(_delta):
 	mouseLocFromPlayer = get_global_mouse_position() - self.position
 	

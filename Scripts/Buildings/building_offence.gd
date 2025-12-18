@@ -1,14 +1,16 @@
 extends Area2D
 
 var playerInArea = false
+var upgradeCost = 1
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$LevelText.clear()
 	$LevelText.add_text("Level : " + str(Global.offenceBuildingLevel))
+	var buyString = "Press F to Upgrade to Level %s for %.0f gold" % [str(Global.offenceBuildingLevel + 1), upgradeCost]
 	$UpgradeText.clear()
-	$UpgradeText.add_text("Press F to Upgrade to Level  " + str(Global.offenceBuildingLevel + 1))
+	$UpgradeText.add_text(buyString)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -27,10 +29,15 @@ func _on_body_exited(body: Node2D) -> void:
 		playerInArea = false
 	
 func LevelBuilding() : 
-	Global.offenceBuildingLevel += 1
+	if (Global.gold >= upgradeCost):
+		Global.gold -= upgradeCost
+		Global.offenceBuildingLevel += 1
+		upgradeCost = Global.offenceBuildingLevel * 2
 	
-	$LevelText.clear()
-	$LevelText.add_text("Level : " + str(Global.offenceBuildingLevel))
+		$LevelText.clear()
+		$LevelText.add_text("Level : " + str(Global.offenceBuildingLevel))
+		var buyString = "Press F to Upgrade to Level %s for %.0f gold" % [str(Global.offenceBuildingLevel + 1), upgradeCost]
+		$UpgradeText.clear()
+		$UpgradeText.add_text(buyString)
 	
-	$UpgradeText.clear()
-	$UpgradeText.add_text("Press F to Upgrade to Level  " + str(Global.offenceBuildingLevel + 1))
+	

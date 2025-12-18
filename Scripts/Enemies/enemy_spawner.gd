@@ -1,8 +1,9 @@
 extends Node2D
 
-var enemy = preload("res://Scenes/Enemies/enemy.tscn")
+@export var enemy = preload("res://Scenes/Enemies/enemy.tscn")
+@export var groupSize = 2
+
 var spawnedEnemies = false
-var groupSize = 2
 var enemyArray = []
 
 func _ready() -> void:

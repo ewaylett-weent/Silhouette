@@ -55,3 +55,22 @@ frame_progress = 0.93611
 [node name="Marker2D" type="Marker2D" parent="."]
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="GoldBase" type="RichTextLabel" parent="."]
+offset_left = -572.0
+offset_top = -324.0
+offset_right = -524.0
+offset_bottom = -299.0
+text = "Gold: "
+fit_content = true
+autowrap_mode = 0
+vertical_alignment = 1
+
+[node name="GoldValue" type="RichTextLabel" parent="."]
+offset_left = -522.0
+offset_top = -324.0
+offset_right = -274.0
+offset_bottom = -299.0
+fit_content = true
+autowrap_mode = 0
+vertical_alignment = 1
